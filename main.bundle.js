@@ -683,20 +683,21 @@ var AppModule = /*@__PURE__*/ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClothesService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+
 // mport { ConfigProvider } from '../config/config';
 
 
 var httpOptions = {
-    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["g" /* HttpHeaders */]({ 'Content-Type': 'application/json' })
+    headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["g" /* HttpHeaders */]({ 'Content-Type': 'application/json' })
 };
-var ClothesService = /*@__PURE__*/ (function () {
+var ClothesService = /** @class */ (function () {
+    // baseURL:any="https://api.dressmepro.com";
     function ClothesService(http) {
         this.http = http;
         // baseURL:any="http://dressmepro-server.kq39epmump.us-east-2.elasticbeanstalk.com";
-        // baseURL:any="https://6b758c23.ngrok.io"
-        this.baseURL = "https://api.dressmepro.com";
+        this.baseURL = "https://368f3cd8.ngrok.io";
     }
     ClothesService.prototype.getdetails = function () {
         // const httpOptions = {
@@ -718,7 +719,6 @@ var ClothesService = /*@__PURE__*/ (function () {
     };
     return ClothesService;
 }());
-
 
 
 
