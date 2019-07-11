@@ -11,8 +11,8 @@ const httpOptions = {
 @Injectable()
 export class ClothesService {
 // baseURL:any="http://dressmepro-server.kq39epmump.us-east-2.elasticbeanstalk.com";
-// baseURL:any="https://6b758c23.ngrok.io"
-baseURL:any="https://api.dressmepro.com";
+baseURL:any="https://368f3cd8.ngrok.io"
+// baseURL:any="https://api.dressmepro.com";
   constructor(public http: HttpClient ) { }
 
   getdetails(): Observable<any> {
