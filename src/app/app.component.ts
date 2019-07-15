@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     "fitting": "",
     "pattern": "",
     "patternSpecial": "",
-    // "patternColor": "",
+    "patternColor": "",
     "colorTag": "",
     "type": ""
   }
@@ -143,7 +143,7 @@ export class AppComponent implements OnInit {
     this.clothObject.color = localStorage.getItem('Cname');
     this.clothObject.clothImage = this.encoded;
     this.clothObject.clothName = this.nameitem
-    // this.clothObject.patternColor = this.linkColor;
+   this.clothObject.patternColor = this.linkColor;
     // console.log(this.clothObject);
     this.paneldetail.postdeatil(this.clothObject).subscribe((res) => {
       console.log(res)
