@@ -89,7 +89,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.backgroundColor = '#fff';
     this.fontColor = '#222';
-    this.linkColor = '#4b4fce';
+    this.linkColor = '#fff';
   }
 
   /**
@@ -157,7 +157,7 @@ export class AppComponent implements OnInit {
         this.clothObject.clothImage = '';
         this.clothObject.clothName = '';
         this.clothObject.color = '';
-        // this.clothObject.patternColor = '';
+        this.clothObject.patternColor = '';
         this.clothObject.patternSpecial = '';
         this.clothObject.shade = '';
         this.clothObject.type = '';

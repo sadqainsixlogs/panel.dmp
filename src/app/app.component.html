@@ -101,11 +101,7 @@
         </div>
 
 
-        <div class="picker">
-          <app-color-picker [color]="linkColor" ngDefaultControl required [(ngModel)]="clothObject.patternColor"
-            [heading]="'Select Secondary Color'" (event)="setColor('link', $event)"></app-color-picker>
-        </div>
-
+       
         <select class="select-field" ngDefaultControl #shade="ngModel" required [(ngModel)]="clothObject.shade">
           <option value="" disabled selected>Select Shade </option>
           <option *ngFor="let s of shades" [value]="s.name">{{s.name}}</option>
@@ -133,6 +129,10 @@
         <div [hidden]="pattern.valid || pattern.pristine " class="alert alert-danger help-block">
           <div [hidden]="!pattern.hasError('required')">
           </div>
+        </div>
+        <div class="picker">
+          <app-color-picker [color]="linkColor" ngDefaultControl required [(ngModel)]="clothObject.patternColor"
+            [heading]="'Select Secondary Color'" (event)="setColor('link', $event)"></app-color-picker>
         </div>
 
 

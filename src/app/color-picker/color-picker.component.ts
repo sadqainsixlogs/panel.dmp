@@ -117,7 +117,7 @@ export class ColorPickerComponent {
       for (var j in this.Colors) {
         this.names.push(this.Colors[j].name);
       }
-      // console.log(this.names);
+       console.log(this.names);
     });
 
   }
