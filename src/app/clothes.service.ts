@@ -12,7 +12,7 @@ const httpOptions = {
 export class ClothesService {
 // baseURL:any="http://dressmepro-server.kq39epmump.us-east-2.elasticbeanstalk.com";
 // baseURL:any="https://368f3cd8.ngrok.io"
-baseURL:any="https://api.dressmepro.com";
+baseURL:any="https://apis.dressmepro.com";
   constructor(public http: HttpClient ) { }
 
   getdetails(): Observable<any> {
