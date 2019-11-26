@@ -80,6 +80,8 @@ export class AppComponent implements OnInit {
     });
 
   }
+
+ 
   // go(){
   //   this.paneldetail.postData().subscribe((res)=>{
   //     xml2js.parseString(res);
@@ -90,6 +92,7 @@ export class AppComponent implements OnInit {
     this.backgroundColor = '#fff';
     this.fontColor = '#222';
     this.linkColor = '#fff';
+    this.getClothdetails();
   }
 
   /**
