@@ -96,7 +96,7 @@
 
         <div class="picker">
           <app-color-picker 
-            [color]="backgroundColor" [heading]="'Select Primary Color'"  (event)="setColor('background', $event)">
+            [color]="backgroundColor" [heading]="'Select Primary Color'"  (event)="setColor('background', $event)"  ngDefaultControl required [(ngModel)]="clothObject.patternColor">
           </app-color-picker>
         </div>
 
@@ -131,7 +131,7 @@
           </div>
         </div>
         <div class="picker">
-          <app-color-picker [color]="linkColor" ngDefaultControl required [(ngModel)]="clothObject.patternColor"
+          <app-color-picker [color]="linkColor"
             [heading]="'Select Secondary Color'" (event)="setColor('link', $event)"></app-color-picker>
         </div>
 
