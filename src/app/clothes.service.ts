@@ -13,21 +13,24 @@ export class ClothesService {
 // baseURL:any="http://dressmepro-server.kq39epmump.us-east-2.elasticbeanstalk.com";
 // baseURL:any="https://368f3cd8.ngrok.io"
 baseURL:any="https://apis.dressmepro.com";
+token;
   constructor(public http: HttpClient ) { }
 
   getdetails(): Observable<any> {
-    // const httpOptions = {
-    //   headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Authorization' : 'Bearer ' + this.token  })
-    // };
-    return this.http.get(this.baseURL+'/cloth/getPanelData')
+    this.token=localStorage.getItem('accesstoken');
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type': 'application/json' , 'Authorization' : 'Bearer ' + this.token  })
+     };
+    return this.http.get(this.baseURL+'/cloth/getPanelData',httpOptions)
         .map((res)=>{return res}
        
         );
   }
   postdeatil(user: any): Observable<any> {
-    // const httpOptions = {
-    //   headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization' : 'Bearer ' + this.token  })
-    // };
+    this.token=localStorage.getItem('accesstoken');
+     const httpOptions = {
+       headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization' : 'Bearer ' + this.token  })
+     };
     return this.http.post<any>(this.baseURL+'/cloth/add',user,httpOptions)
         .map((res)=>{return res}
        
