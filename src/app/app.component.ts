@@ -144,7 +144,7 @@ export class AppComponent implements OnInit {
     this.clothObject.clothImage = this.encoded;
     this.clothObject.clothName = this.nameitem
    this.clothObject.patternColor = this.linkColor;
-    // console.log(this.clothObject);
+     //console.log(this.clothObject);
     this.paneldetail.postdeatil(this.clothObject).subscribe((res) => {
       console.log(res)
       if (res.status == 0) {

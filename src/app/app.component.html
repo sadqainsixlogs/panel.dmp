@@ -96,7 +96,7 @@
 
         <div class="picker">
           <app-color-picker 
-            [color]="backgroundColor" [heading]="'Select Primary Color'"  (event)="setColor('background', $event)"  ngDefaultControl required [(ngModel)]="clothObject.patternColor">
+            [color]="backgroundColor" [heading]="'Select Primary Color'"  (event)="setColor('background', $event)">
           </app-color-picker>
         </div>
 
@@ -130,10 +130,10 @@
           <div [hidden]="!pattern.hasError('required')">
           </div>
         </div>
-        <div class="picker">
-          <app-color-picker [color]="linkColor"
+        <!-- <div class="picker">
+          <app-color-picker [color]="linkColor" ngDefaultControl required [(ngModel)]="clothObject.patternColor"
             [heading]="'Select Secondary Color'" (event)="setColor('link', $event)"></app-color-picker>
-        </div>
+        </div> -->
 
 
         <select class="select-field" ngDefaultControl name="patternSpecial" #patternSpecial="ngModel" required
