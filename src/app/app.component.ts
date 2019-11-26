@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
   naam: any;
   constructor(private spinnerService: Ng4LoadingSpinnerService,private paneldetail: ClothesService) {
 
-    this.getClothdetails();
+    
     // this.go();
     
     
@@ -233,7 +233,7 @@ export class AppComponent implements OnInit {
         // localStorage.setItem('email', res.userExist.email);
         // localStorage.setItem('phone',res.userExist.number);
         // localStorage.setItem('FL',res.userExist.isFirstlogin)
-
+        this.getClothdetails();
 
       }
     });
