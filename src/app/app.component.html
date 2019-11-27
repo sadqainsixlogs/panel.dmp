@@ -135,16 +135,17 @@
             [heading]="'Select Secondary Color'" (event)="setColor('link', $event)"></app-color-picker>
         </div> -->
 
-
+        <div class="picker">
+          <app-color-picker [color]="linkColor" ngDefaultControl required [(ngModel)]="clothObject.patternColor"
+            [heading]="'Select Secondary Color'" (event)="setColor('link', $event)"></app-color-picker>
+        </div>
         <select class="select-field" ngDefaultControl name="patternSpecial" #patternSpecial="ngModel" required
           [(ngModel)]="clothObject.patternSpecial">
           <option hidden value="" selected>Select Pattern Special </option>
           <option *ngFor="let ps of patternspecial" [value]="ps.name">{{ps.name}}</option>
         </select>
-        
-        <!-- <div class="picker">
-          <app-color-picker [color]="linkColor" [heading]="'Links'" (event)="setColor('link', $event)"></app-color-picker>
-        </div> -->
+     
+
 
         <div class="button-submit">
           <button (click)="done()" [disabled]="clothName.valid==false || type.valid==false || pattern.valid==false || shade.valid==false"  >Save cloth</button>

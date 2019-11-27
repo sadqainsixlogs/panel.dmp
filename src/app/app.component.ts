@@ -104,12 +104,15 @@ export class AppComponent implements OnInit {
     switch (type) {
       case 'background':
         this.backgroundColor = color;
+        localStorage.removeItem('SC');
         break;
       case 'font':
         this.fontColor = color;
         break;
       case 'link':
+        localStorage.setItem('SC','SC');
         this.linkColor = color;
+        
         break;
       default:
         break;

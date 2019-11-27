@@ -17,6 +17,9 @@ export class ColorPickerComponent {
   public show = false;
   combine: any = [];
   public c: any;
+  public Sectags: any[] = [];
+  public Secnames: any[] = [];
+  public SecColors: any[];
   // public defaultColors: string[] = [
   //   'Null',
   //   '#fdbabc',
@@ -129,12 +132,40 @@ export class ColorPickerComponent {
     this.color = color;
     this.event.emit(this.color);
     this.show = false;
+    if(localStorage.getItem('SC') != 'SC'){
     for (var id in this.defaultColors) {
       if (this.color == this.defaultColors[id]) {
         // console.log(this.tags[id]);
         localStorage.setItem('Ctag', this.tags[id]);
         localStorage.setItem('Cname', this.names[id]);
         this.c = this.names[id];
+      }
+    }}
+    if (localStorage.getItem('SC') == "SC") {
+      console.log('--------------');
+
+      this.SecColors = this.defaultColors;
+      console.log('**',this.SecColors)
+      for (var i in this.Colors) {
+        this.Sectags.push(this.Colors[i].colorTag);
+        console.log('**tags',this.Sectags)
+      }
+      for (var j in this.Colors) {
+        this.Secnames.push(this.Colors[j].name);
+        console.log('**name',this.Secnames)
+      }
+      for (var id in this.SecColors) {
+       
+        if (this.color == this.SecColors[id]) {
+         
+       console.log(this.color);
+          localStorage.setItem('SeckCtag', this.Sectags[id]);
+          localStorage.setItem('SecCname', this.Secnames[id]);
+              this.c = this.names[id];
+          //   }
+          // }
+
+        }
       }
     }
   }
